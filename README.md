@@ -26,7 +26,7 @@ java $JAVA_OPTS \
 ### Dependencies
 
 #### Maven
-```
+```maven
 <dependencies>
   <dependency>
     <groupId>io.opentelemetry.instrumentation</groupId>
@@ -36,14 +36,14 @@ java $JAVA_OPTS \
 </dependencies>
 ```
 #### Gradle
-```
+```gradle
 dependencies {
     implementation('io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:1.27.0')
 }
 ```
 
 #### Code example
-```
+```java
 import io.opentelemetry.instrumentation.annotations.WithSpan;
 import io.opentelemetry.instrumentation.annotations.SpanAttribute;
 
@@ -62,7 +62,7 @@ public class MyClass {
 ## Manual Instrumentation for span event
 
 #### maven
-```
+```maven
 <project>
     <dependencyManagement>
         <dependencies>
@@ -84,13 +84,13 @@ public class MyClass {
 </project>
 ```
 #### gradle
-```
+```gradle
 dependencies {
     implementation 'io.opentelemetry:opentelemetry-api:1.28.0'
 }
 ```
 #### example
-```
+```java
 import io.opentelemetry.api.trace.Span;
 
     @WithSpan
@@ -103,7 +103,7 @@ import io.opentelemetry.api.trace.Span;
 ```
 
 #### Full code
-```
+```java
 package com.example.demo.jaeger.controller;
 
 import org.springframework.beans.factory.annotation.Value;
