@@ -1,7 +1,7 @@
 
 ## OpenTelemetry basic concept
 
-![concept](https://hackmd.io/_uploads/SyzpUgKt2.png)
+![concept](./img/otel.png)
 
 ---
 
