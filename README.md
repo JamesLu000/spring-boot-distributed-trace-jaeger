@@ -1,3 +1,19 @@
+## how to use
+
+```
+./run.sh
+```
+wait tomcat server initialize finished
+
+execute
+```
+curl -i http://localhost:8080/hello/path1
+```
+access jaeger
+[jaeger](http://localhost:16686)
+access grafana
+[grafana](http://localhost:3000)
+
 
 ## OpenTelemetry basic concept
 
