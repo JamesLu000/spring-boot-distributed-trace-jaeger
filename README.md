@@ -1,6 +1,7 @@
 
 ## OpenTelemetry basic concept
-![](https://hackmd.io/_uploads/SyzpUgKt2.png)
+
+![concept](https://hackmd.io/_uploads/SyzpUgKt2.png)
 
 ---
 
