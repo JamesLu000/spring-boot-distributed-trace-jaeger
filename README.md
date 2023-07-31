@@ -14,6 +14,17 @@ access jaeger
 access grafana
 [grafana](http://localhost:3000)
 
+## python version
+
+1. install requirements.txt
+```
+pip install -r requirements.txt
+```
+2. docker-compose up
+3. excute ```python/python_server.sh```
+4. excute ```python/python_client.sh```
+5. open ```localhost:3000``` to access grafana
+
 
 ## OpenTelemetry basic concept
 

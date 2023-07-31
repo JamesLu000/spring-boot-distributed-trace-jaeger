@@ -21,9 +21,22 @@ services:
       - loki
   tempo:
     image: grafana/tempo:2.1.1
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./tempo.yaml:/etc/tempo.yaml
+      # - ./tempo-data:/tmp/tempo
     ports:
-      - "3100:3100"
-      - "4327:4317"
+      - "14268"  # jaeger ingest
+      - 3200:3200   # tempo
+      - 4327:4327  # otlp grpc
+      - 4328:4328  # otlp http
+      - "9411"   # zipkin
+  # tempo:
+  #   image: grafana/tempo:2.1.1
+  #   ports:
+  #     - 3100:3100
+  #     - 4327:4317
+  #     - 4328:4318
     # command: -config.file=/etc/tempo/local-config.yaml
   # jaeger:
   #   image: jaegertracing/all-in-one:1.38.1
@@ -38,7 +51,7 @@ services:
   loki:
     image: grafana/loki:latest
     ports:
-      - "3200:3100"
+      - "3100:3100"
     command: -config.file=/etc/loki/local-config.yaml
 
   grafana:
