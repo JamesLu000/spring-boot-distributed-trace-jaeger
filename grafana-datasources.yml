@@ -18,6 +18,12 @@ datasources:
       #          matcherRegex: "traceID=(\\w+)"
       #          url: "$${__value.raw}"
       #          datasourceUid: jaeger
+  - name: tempo
+    uid: tempo
+    type: tempo
+    access: proxy
+    url: http://tempo:3100
+    editable: true
 
   - name: Jaeger
     type: jaeger
