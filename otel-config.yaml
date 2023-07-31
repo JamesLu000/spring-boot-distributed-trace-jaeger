@@ -23,7 +23,7 @@ exporters:
     loglevel: debug
   otlp:
     # endpoint: "${JAEGER_ENDPOINT}"
-    endpoint: "tempo:4317"
+    endpoint: "tempo:4327"
     tls:
       insecure: true
   prometheus:

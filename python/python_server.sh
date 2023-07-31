@@ -12,13 +12,12 @@
 # export OTEL_SERVICE_NAME="python-client"
 # export OTEL_LOG_LEVEL="ALL"
 
-
 OTEL_TRACES_EXPORTER="otlp" \
 OTEL_LOGS_EXPORTER="otlp" \
 OTEL_METRICS_EXPORTER=none \
 OTEL_PYTHON_LOG_CORRELATION=true \
 OTEL_EXPORTER_OTLP_PROTOCOL="grpc" \
-OTEL_EXPORTER_OTLP_ENDPOINT="http://otel-collector-collector.opentelemetry-operator-system.svc:4317" \
+OTEL_EXPORTER_OTLP_ENDPOINT="http://otel-collector:4317" \
 OTEL_EXPORTER_OTLP_TRACES_INSECURE="true" \
 OTEL_RESOURCE_ATTRIBUTES="service.namespace=my-namespace" \
 OTEL_NODE_RESOURCE_DETECTORS="env,host,os" \
